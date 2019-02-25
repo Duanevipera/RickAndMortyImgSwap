@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Swapping</title>
+
+    <style>
+    #thumbnails{text-align: center;}    
+    </style>
+
+</head>
+<body>
+   
+    <h1 id="thingy">Here is an h1 tag</h1>
+
+
+     <!-- Image Swapping section start -->
+
+     
+
+    <div style="text-align: center">
+        <h1 id="captag"> words here that change with the picture</h1>
+
+        <img src="images/MrMeeseeks.gif" id="mainImg" style= "height: 100px">
+
+        
+
+        <script>
+
+            var timey =setInterval(changeImage, 3000); 
+            var timey2 =setInterval(changeCaption, 3000);
+            
+            let selected = 0;
+            let selected2 = 0;
+            function changeCaption(){
+                selected2 =(selected2+1)%wordy.length;
+                document.getElementById('captag').innerHTML = wordy[selected2];
+            }
+            function changeImage(){
+                selected =(selected+1)%RickMorty.length;
+                document.getElementById('mainImg').src=RickMorty[selected];
+            }
+
+            // function stopTimer1(){
+            //     clearInterval(timey);
+            // }
+
+
+
+            // function stopTimer2(){
+            //     clearInterval(timey2);
+            // }
+
+
+            
+            
+
+            var RickMorty = ['images/MrMeeseeks.gif', 'images/PoopyButthole.png', 'images/ScaryTerry.png', 'images/rick.png', 'images/sister.gif'];
+
+            var wordy = ['Mr. Meeseeks', 'Mr. PoopyButthole', 'Scary Terry', 'Rick Sanchez', 'Summer']
+
+            
+        
+            var arylength = RickMorty.length;
+            for (let i = 0; i < arylength; i++) {
+                var stringy = "<img height='150' src='" + RickMorty[i] + "'onclick='changeImage(RickMorty[i])/>";
+                
+                document.write();
+                }  
+        </script>
+    
+    </div>
+    
+
+    <div id="thumbnails">
+
+    
+
+        <img src="images/MrMeeseeks.gif" alt="Mr. Meeseeks" style= "height: 100px" onclick="document.getElementById('mainImg').src='images/MrMeeseeks.gif'">
+
+        <img src="images/PoopyButthole.png" alt="Mr. PoopyButthole" style= "height: 100px"onclick="document.getElementById('mainImg').src='images/PoopyButthole.png'" />
+
+        <img src="images/ScaryTerry.png" alt="Scary Terry" style= "height: 100px" onclick="document.getElementById('mainImg').src='images/ScaryTerry.png'"/>
+        
+        <img src="images/rick.png" alt="Rick Sanchez" style= "height: 100px"onclick="document.getElementById('mainImg').src='images/rick.png'"  />
+        
+        <img src="images/sister.gif" alt="Morty's Sister" style= "height: 100px" onclick="document.getElementById('mainImg').src='images/sister.gif'" /> 
+    </div>
+
+<!-- Image Swapping End -->
+    <ul id= "list">
+
+    </ul>
+
+    <div id= "numberStuff">
+
+    </div>
+
+    <input type="button" value="Add Items" id="but1">
+
+    <input type="button" value="StartTime" id="start">
+
+    <input type="button" value="StopTime" id="stop">
+
+
+    <script src="warmup.js"> </script>
+    
+</body>
+</html>
